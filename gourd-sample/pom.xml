@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tieland.gourd</groupId>
+    <artifactId>gourd-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.tieland.gourd</groupId>
+  <artifactId>gourd-sample</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>gourd-sample</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <gourd-rabbitmq.version>1.0-SNAPSHOT</gourd-rabbitmq.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-rabbit-config</artifactId>
+      <version>${gourd-rabbitmq.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-stack-jdbc</artifactId>
+      <version>${gourd-rabbitmq.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+  </dependencies>
+</project>

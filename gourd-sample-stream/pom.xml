@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tieland.gourd</groupId>
+    <artifactId>gourd-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.tieland.gourd</groupId>
+  <artifactId>gourd-sample-stream</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>gourd-sample-stream</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <gourd-stream-rabbit.version>1.0-SNAPSHOT</gourd-stream-rabbit.version>
+    <gourd-stack-jdbc.version>1.0-SNAPSHOT</gourd-stack-jdbc.version>
+    <gourd-retry.version>1.0-SNAPSHOT</gourd-retry.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Finchley.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-stream-rabbit</artifactId>
+      <version>${gourd-stream-rabbit.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-stack-jdbc</artifactId>
+      <version>${gourd-stack-jdbc.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-retry</artifactId>
+      <version>${gourd-retry.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>

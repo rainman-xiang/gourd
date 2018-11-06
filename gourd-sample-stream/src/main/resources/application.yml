@@ -1,0 +1,31 @@
+server:
+  port: 8877
+spring:
+  application:
+    name: sample-stream
+  rabbitmq:
+    host: 192.168.1.19
+    port: 5672
+    username: admin
+    password: 123456
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.100:3306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: sgay
+    password: sgayABC123!
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 20
+      minimum-idle: 10
+      connection-test-query: select 1
+  jpa:
+    show-sql: true
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: demo-3
+          content-type: application/json
+#logging:
+#  level:
+#    org.springframework: debug

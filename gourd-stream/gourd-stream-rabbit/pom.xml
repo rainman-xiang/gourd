@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tieland.gourd</groupId>
+    <artifactId>gourd-stream</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.tieland.gourd</groupId>
+  <artifactId>gourd-stream-rabbit</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>gourd-stream-rabbit</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <gourd-stream-core.version>1.0-SNAPSHOT</gourd-stream-core.version>
+    <gourd-rabbit-core.version>1.0-SNAPSHOT</gourd-rabbit-core.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-stream-core</artifactId>
+      <version>${gourd-stream-core.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-rabbit-core</artifactId>
+      <version>${gourd-rabbit-core.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+    </dependency>
+  </dependencies>
+</project>

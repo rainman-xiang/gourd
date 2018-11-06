@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tieland.gourd</groupId>
+    <artifactId>gourd-rabbit</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.tieland.gourd</groupId>
+  <artifactId>gourd-rabbit-core</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>gourd-rabbit-core</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <gourd-core.version>1.0-SNAPSHOT</gourd-core.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tieland.gourd</groupId>
+      <artifactId>gourd-core</artifactId>
+      <version>${gourd-core.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-messaging</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.amqp</groupId>
+      <artifactId>spring-rabbit</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>http-client</artifactId>
+          <groupId>com.rabbitmq</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+  </dependencies>
+</project>

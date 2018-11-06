@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.4.RELEASE</version>
+  </parent>
+  <groupId>org.tieland.gourd</groupId>
+  <artifactId>gourd-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>gourd-parent</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <lombok.version>1.18.0</lombok.version>
+    <guava.version>23.0</guava.version>
+    <mysql-connector-java.version>5.1.46</mysql-connector-java.version>
+    <fastjson.version>1.2.47</fastjson.version>
+    <commons-collections.version>3.2.2</commons-collections.version>
+    <commons-lang3.version>3.7</commons-lang3.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql-connector-java.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>${commons-collections.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>gourd-common</module>
+    <module>gourd-core</module>
+    <module>gourd-sample</module>
+    <module>gourd-rabbit</module>
+    <module>gourd-activemq</module>
+    <module>gourd-kafka</module>
+    <module>gourd-retry</module>
+    <module>gourd-stack</module>
+    <module>gourd-sample-stream</module>
+    <module>gourd-stream</module>
+  </modules>
+</project>
